@@ -1,26 +1,14 @@
 
-//Declaring and initializing our variables
-int a = 5;
-int b = 10;
 
-//If a is equal 10 OR b = 10, then print success else failure
-if(a + b == 10 || a == 10 || b == 10){
-println("Success!");
-} else {
-  println("Failure!");
-}
+public int[] removeElement(int[] array, int index) {
+  int[] newArray = new int [array.length - 1];
 
-//6b
-//Declaring and initializing our variables
-int x = 15;
-int y = 8;
-int z = 7;
+  for (int i = 0, k = 0; i < array.length; i++) {
+    if (i == index) {
+      continue;
+    }
 
-//If condition = 30, print success, else failure
-if (x+y+z == 30){
-  println("Success!");
-}
-  else {
-    println("failure!");
+    newArray[k++] = array[i];
   }
-  
+  return newArray;
+}
